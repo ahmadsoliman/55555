@@ -1,8 +1,58 @@
 <html>
 <head>
   <title>55555</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .madness iframe {
+        position: absolute;
+        opacity: 0.2;
+        width: 500px;
+        height: 500px;
+    }
+    #videos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 1080px;
+    }
+    .madness #videos {
+      width: 500px;
+    }
+    @-webkit-keyframes fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-moz-keyframes fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-o-keyframes fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    button {
+      color: maroon;
+      font-size: 40px;
+      margin: 40px;
+      opacity: 0;
+      -moz-animation: fadein 5s ease-in 20s forwards; /* Firefox */
+      -webkit-animation: fadein 5s ease-in 20s forwards; /* Safari and Chrome */
+      -o-animation: fadein 5s ease-in 20s forwards; /* Opera */
+      animation: fadein 5s ease-in 20s forwards;
+    }
+  </style>
 </head>
 <body>
+  <button onclick="flipMadness()" > DO NOT CLICK THIS! </button>
+  <div id="videos"></div>
   <script src="55555.js"></script>
 </body>
 </html>

@@ -4,5 +4,13 @@
   v.width="340";
   v.height="240";
   v.src="https://www.youtube.com/embed/"+id+"?autoplay=1&vq=tiny";
-  d.body.insertBefore(v, d.body.firstChild);
+  d.getElementById("videos").appendChild(v);
 });
+
+
+function flipMadness() {
+  if(document.body.className.length === 0)
+    document.body.className = "madness";
+  else
+    document.body.className = "";
+}
